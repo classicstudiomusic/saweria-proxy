@@ -24,7 +24,7 @@ const app = express();
 app.use(express.json());
 
 // Secret key - sama dengan di SaweriaHandler.lua
-const SECRET_KEY = process.env.SECRET_KEY || "BUAT_PASSWORD_RAHASIA_SESUKAMU";
+const SECRET_KEY = process.env.SECRET_KEY || "amclub123";
 
 // Queue donasi yang belum dikirim ke Roblox
 let donationQueue = [];
@@ -131,7 +131,7 @@ app.get("/", (req, res) => {
 // ============================================================
 // START SERVER
 // ============================================================
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`✅ Saweria Proxy berjalan di port ${PORT}`);
   console.log(`   Webhook URL : /webhook`);
