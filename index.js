@@ -56,7 +56,7 @@ app.post("/webhook", (req, res) => {
   const donation = {
     id:      body.id || body.created_at || Date.now().toString(),
     name:    body.donator_name || body.name || "Anonymous",
-    amount:  formatRupiah(body.amount || 0),
+    amount:  formatRupiah(body.etc?.amount_to_display || body.amount_raw || body.amount || 0),
     message: body.message || "",
     timestamp: Date.now(),
   };
